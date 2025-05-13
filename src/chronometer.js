@@ -21,22 +21,22 @@ class Chronometer {
     return Math.floor(this.currentTime % 60);
   }
   computeTwoDigitNumber(value) {
-    // const newValue = value.toString();
+    const newValue = value.toString();
 
-    // if (newValue.length < 9 || newValue.length >= 0) {
-    //   let padTime = "0" + newValue;
-    //   return padTime.slice(-2);
-    // }
+    if (newValue.length < 9 || newValue.length >= 0) {
+      let padTime = "0" + newValue;
+      return padTime.slice(-2);
+    }
 
-    // return newValue;
+    return newValue;
 
-     if (value >= 0 || value <= 9){
-      const padTime = ('0' + value)
-      return padTime.slice(-2).toString()
-     }
-     const result = value.toString();
+    //  if (value >= 0 || value <= 9){
+    //   const padTime = ('0' + value)
+    //   return padTime.slice(-2).toString()
+    //  }
+    //  const result = value.toString();
 
-     return result;
+    //  return result;
   }
 
   stop() {
